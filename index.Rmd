@@ -2,4 +2,22 @@
 title: "Carleton Algo Club"
 ---
 
-Home Page
+### Welcome to the Carleton Algorithmic Trading Club Homepage
+
+#### __News__
+
+Visit us on Friday, September 14 from 5:00-7:00 PM at the Carleton College Club Fair!
+
+#### __Check Out Our Recent Posts__
+
++ [Older Posts](content.html)
+
+#### __Join Our Google Group__
+
+[Carleton Algo Club Google Group](https://groups.google.com/a/carleton.edu/forum/#!forum/carletonalgoclub.group "Join Our Google Group")
+
+#### __Get in Contact__
+
+If you have any specific questions or want to learn more about our organization please reach out! We're always happy to talk about the club over email or in person. 
+
+[Contact Us](contact.html "Contact Us")

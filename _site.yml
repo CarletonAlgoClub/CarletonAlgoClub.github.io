@@ -6,8 +6,10 @@ navbar:
       href: index.html
     - text: "Main Content"
       href: content.html
-    - text: "Other Posts"
+    - text: "Resources"
       href: guest_posts.html
+    - text: "Schedule"
+      href: schedule.html
     - text: "About"
       href: about.html
     - text: "Contact"

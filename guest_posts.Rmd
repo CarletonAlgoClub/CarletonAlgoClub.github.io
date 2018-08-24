@@ -1,5 +1,17 @@
 ---
-title: "Other Posts"
+title: "Resources"
 ---
 
-Other Posts
+#### __Book Recomendations__
+
++ An Introduction to Statistical Learning (with Application in R)
++ What Do Hedge Funds Really Do: An Introduction to Portfolio Management
++ Algorithmic Trading & DMA: An Introduction to Direct Access Trading Strategies
+
+#### __Elliot Pickens' Personal Blog__
+
++ [Data Pun TBD](epickens.github.io "Data Pun TBD")
+
+#### __Quantopian__
+
++ [Quantopian](https://www.quantopian.com/)
