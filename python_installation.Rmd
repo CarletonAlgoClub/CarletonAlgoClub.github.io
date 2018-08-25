@@ -1,0 +1,78 @@
+---
+title: "Let's Setup Python"
+author: "Elliot Pickens"
+---
+
+During club activities we will often rely on a number of Python packages that are not included in the base installation of python. To simplify things and make sure we’re all on the same page we’re going to be using the Anaconda Python distribution. 
+
+Anaconda streamlines package management through Conda, and pre-installs many of the most frequently used data science packages. I’d strongly recommend you use it to keep track of your packages, but if you want to do things the hard way you can scroll past the Anaconda installation guide to find a guide for the base installation of Python.
+
+#### __Anaconda Installation__
+
+#### __OSX__
+
+1. Download the [Anaconda installer](https://www.anaconda.com/download/#macos) __Python 3.6 Version__
+
+2. Double click the __.pkg__ file and begin the installation
+
+3. Test your installation by typing __conda__ in the terminal
+
+#### __Windows__
+
+1. Download the [Anaconda installer](https://www.anaconda.com/download/#windows) __Python 3.6 Version__
+
+2. Double click the __.exe__ file and begin the installation
+
+3. Test your installation by typing __conda__ in the terminal
+
+#### __Linux__
+
+1. Download the [Anaconda installer](https://www.anaconda.com/download/#linux) __Python 3.6 Version__
+
+2. Open the terminal and navigate you the location of the Anaconda download
+
+3. Run __bash Anaconda3-5.2.0-Linux-x86_64.sh__ -- replace 3-5.2.0 with whichever version you've downloaded
+
+4. Follow the installation prompts
+
+5. Test your installation by typing __conda__ in the terminal
+
+You can also check your Python installation by typing __python --version__ in your terminal if you're on osx or linux, or simply __python__ if you're running windows.
+
+#### __Basic Python 3.6 installation__
+
+__OSX__ should already come with python pre-installed, but if it isn't version 3.6 you can update it using the following commands.
+
+1. Install Xcode
+
+    + In the terminal run __xcode-select --install__ (this may take a while)
+
+2. Install Homebrew
+
+    + In the terminal run __/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"__
+
+3. Check your Homebrew installation by typing __brew doctor__
+
+4. Install Python 3.6
+
+    + Run __brew install python3__ in the terminal
+
+5. Check your python installation using __python3 --version__
+
+__Windows__
+
+1. Download the latest Python installer [here](https://www.python.org/downloads/windows/)
+
+2. Run the downloaded __.exe__ file
+
+3. Check your installation by running __python -V__ in the terminal
+
+__Linux__
+
+1. Run __sudo apt update__ in the terminal
+
+2. Run __sudo apt install python3.6__ in the terminal
+
+3. Check the installation by running __python3.6 -V__
+
+Now if everything went well you should have a working version of Python 3 through either Anaconda or the base install.

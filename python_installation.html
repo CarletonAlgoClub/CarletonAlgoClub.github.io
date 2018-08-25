@@ -9,9 +9,10 @@
 <meta name="generator" content="pandoc" />
 
 
+<meta name="author" content="Elliot Pickens" />
 
 
-<title>Resources</title>
+<title>Let’s Setup Python</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -210,54 +211,76 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Resources</h1>
+<h1 class="title toc-ignore">Let’s Setup Python</h1>
+<h4 class="author"><em>Elliot Pickens</em></h4>
 
 </div>
 
 
-<div id="kaggle" class="section level4">
-<h4><strong>Kaggle</strong></h4>
-<ul>
-<li><a href="https://www.kaggle.com/">Kaggle</a></li>
-</ul>
+<p>During club activities we will often rely on a number of Python packages that are not included in the base installation of python. To simplify things and make sure we’re all on the same page we’re going to be using the Anaconda Python distribution.</p>
+<p>Anaconda streamlines package management through Conda, and pre-installs many of the most frequently used data science packages. I’d strongly recommend you use it to keep track of your packages, but if you want to do things the hard way you can scroll past the Anaconda installation guide to find a guide for the base installation of Python.</p>
+<div id="anaconda-installation" class="section level4">
+<h4><strong>Anaconda Installation</strong></h4>
 </div>
-<div id="uci-machine-learning-repository" class="section level4">
-<h4><strong>UCI Machine Learning Repository</strong></h4>
-<ul>
-<li><a href="https://archive.ics.uci.edu/ml/index.php" title="UCI Machine Learning Repository">UCI Repo</a></li>
-</ul>
+<div id="osx" class="section level4">
+<h4><strong>OSX</strong></h4>
+<ol style="list-style-type: decimal">
+<li><p>Download the <a href="https://www.anaconda.com/download/#macos">Anaconda installer</a> <strong>Python 3.6 Version</strong></p></li>
+<li><p>Double click the <strong>.pkg</strong> file and begin the installation</p></li>
+<li><p>Test your installation by typing <strong>conda</strong> in the terminal</p></li>
+</ol>
 </div>
-<div id="udacity" class="section level4">
-<h4><strong>Udacity</strong></h4>
-<ul>
-<li><a href="https://www.udacity.com/">Udacity</a></li>
-</ul>
+<div id="windows" class="section level4">
+<h4><strong>Windows</strong></h4>
+<ol style="list-style-type: decimal">
+<li><p>Download the <a href="https://www.anaconda.com/download/#windows">Anaconda installer</a> <strong>Python 3.6 Version</strong></p></li>
+<li><p>Double click the <strong>.exe</strong> file and begin the installation</p></li>
+<li><p>Test your installation by typing <strong>conda</strong> in the terminal</p></li>
+</ol>
 </div>
-<div id="data-carpentry" class="section level4">
-<h4><strong>Data Carpentry</strong></h4>
-<ul>
-<li><a href="https://datacarpentry.org/">Data Carpentry</a></li>
-</ul>
+<div id="linux" class="section level4">
+<h4><strong>Linux</strong></h4>
+<ol style="list-style-type: decimal">
+<li><p>Download the <a href="https://www.anaconda.com/download/#linux">Anaconda installer</a> <strong>Python 3.6 Version</strong></p></li>
+<li><p>Open the terminal and navigate you the location of the Anaconda download</p></li>
+<li><p>Run <strong>bash Anaconda3-5.2.0-Linux-x86_64.sh</strong> – replace 3-5.2.0 with whichever version you’ve downloaded</p></li>
+<li><p>Follow the installation prompts</p></li>
+<li><p>Test your installation by typing <strong>conda</strong> in the terminal</p></li>
+</ol>
+<p>You can also check your Python installation by typing <strong>python –version</strong> in your terminal if you’re on osx or linux, or simply <strong>python</strong> if you’re running windows.</p>
 </div>
-<div id="book-recomendations" class="section level4">
-<h4><strong>Book Recomendations</strong></h4>
+<div id="basic-python-3.6-installation" class="section level4">
+<h4><strong>Basic Python 3.6 installation</strong></h4>
+<p><strong>OSX</strong> should already come with python pre-installed, but if it isn’t version 3.6 you can update it using the following commands.</p>
+<ol style="list-style-type: decimal">
+<li><p>Install Xcode</p>
 <ul>
-<li>An Introduction to Statistical Learning (with Application in R)</li>
-<li>What Do Hedge Funds Really Do: An Introduction to Portfolio Management</li>
-<li>Algorithmic Trading &amp; DMA: An Introduction to Direct Access Trading Strategies</li>
-</ul>
-</div>
-<div id="elliot-pickens-personal-blog" class="section level4">
-<h4><strong>Elliot Pickens’ Personal Blog</strong></h4>
+<li>In the terminal run <strong>xcode-select –install</strong> (this may take a while)</li>
+</ul></li>
+<li><p>Install Homebrew</p>
 <ul>
-<li><a href="https://epickens.github.io/" title="Data Pun TBD">Data Pun TBD</a></li>
-</ul>
-</div>
-<div id="quantopian" class="section level4">
-<h4><strong>Quantopian</strong></h4>
+<li>In the terminal run <strong>/usr/bin/ruby -e “$(curl -fsSL <a href="https://raw.githubusercontent.com/Homebrew/install/master/install" class="uri">https://raw.githubusercontent.com/Homebrew/install/master/install</a>)”</strong></li>
+</ul></li>
+<li><p>Check your Homebrew installation by typing <strong>brew doctor</strong></p></li>
+<li><p>Install Python 3.6</p>
 <ul>
-<li><a href="https://www.quantopian.com/">Quantopian</a></li>
-</ul>
+<li>Run <strong>brew install python3</strong> in the terminal</li>
+</ul></li>
+<li><p>Check your python installation using <strong>python3 –version</strong></p></li>
+</ol>
+<p><strong>Windows</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Download the latest Python installer <a href="https://www.python.org/downloads/windows/">here</a></p></li>
+<li><p>Run the downloaded <strong>.exe</strong> file</p></li>
+<li><p>Check your installation by running <strong>python -V</strong> in the terminal</p></li>
+</ol>
+<p><strong>Linux</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Run <strong>sudo apt update</strong> in the terminal</p></li>
+<li><p>Run <strong>sudo apt install python3.6</strong> in the terminal</p></li>
+<li><p>Check the installation by running <strong>python3.6 -V</strong></p></li>
+</ol>
+<p>Now if everything went well you should have a working version of Python 3 through either Anaconda or the base install.</p>
 </div>
 
 

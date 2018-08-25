@@ -1,0 +1,51 @@
+---
+title: "R Setup"
+author: Elliot Pickens
+---
+
+Python is great, but we sometimes also use R. 
+
+Here is a quick installation guide for R and R Studio
+
+#### __Install R__
+
+__Windows__
+
+1. Download R from [here](https://cran.r-project.org/bin/windows/base/)
+
+2. Run the downloaded __.exe__ file
+
+__OSX__
+
+1. Download R from [here](https://cran.r-project.org/bin/macosx/)
+
+2. Run the downloaded __.pkg__ file
+
+__Linux (Ubuntu)__
+
+1. Run __sudo apt-get install r-base__ in the terminal
+
+#### __Install R Studio__
+
+__Windows__
+
+1. Download R Studio from [here](https://www.rstudio.com/products/rstudio/download/)
+
+2. Run the downloaded __.exe__ file
+
+__OSX__
+
+1. Download R Studio from [here](https://www.rstudio.com/products/rstudio/download/)
+
+2. Run the downloaded __.dmg__ file
+
+__Linux (Ubuntu)__
+
+1. Run the following commands in the terminal
+
+    + sudo apt-get install gdebi-core
+    + wget https://download1.rstudio.org/rstudio-0.99.896-amd64.deb
+    + sudo gdebi -n rstudio-0.99.896-amd64.deb
+    + rm rstudio-0.99.896-amd64.deb
+    
+Now you should have a working installation of both R and R Studio.

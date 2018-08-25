@@ -2,4 +2,5 @@
 title: "Main Content"
 ---
 
-New Posts Coming Soon!
++ [Let's Setup Python](python_installation.html)
++ [R Setup](r_setup.html)

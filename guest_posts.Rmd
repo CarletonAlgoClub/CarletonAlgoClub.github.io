@@ -1,6 +1,21 @@
 ---
 title: "Resources"
 ---
+#### __Kaggle__
+
++ [Kaggle](https://www.kaggle.com/)
+
+#### __UCI Machine Learning Repository__ 
+
++ [UCI Repo](https://archive.ics.uci.edu/ml/index.php "UCI Machine Learning Repository")
+
+#### __Udacity__
+
++ [Udacity](https://www.udacity.com/)
+
+#### __Data Carpentry__
+
++ [Data Carpentry](https://datacarpentry.org/)
 
 #### __Book Recomendations__
 
