@@ -43,9 +43,9 @@ __Linux (Ubuntu)__
 
 1. Run the following commands in the terminal
 
-    + sudo apt-get install gdebi-core
-    + wget https://download1.rstudio.org/rstudio-0.99.896-amd64.deb
-    + sudo gdebi -n rstudio-0.99.896-amd64.deb
-    + rm rstudio-0.99.896-amd64.deb
+    + __sudo apt-get install gdebi-core__
+    + __wget https://download1.rstudio.org/rstudio-0.99.896-amd64.deb__
+    + __sudo gdebi -n rstudio-0.99.896-amd64.deb__
+    + __rm rstudio-0.99.896-amd64.deb__
     
 Now you should have a working installation of both R and R Studio.

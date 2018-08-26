@@ -4,3 +4,4 @@ title: "Main Content"
 
 + [Let's Setup Python](python_installation.html)
 + [R Setup](r_setup.html)
++ [Git Basics](git_basics.html)

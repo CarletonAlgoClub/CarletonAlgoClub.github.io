@@ -9,9 +9,10 @@
 <meta name="generator" content="pandoc" />
 
 
+<meta name="author" content="Elliot Pickens" />
 
 
-<title>Carleton Algo Club</title>
+<title>Git Basics</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -210,39 +211,71 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Carleton Algo Club</h1>
+<h1 class="title toc-ignore">Git Basics</h1>
+<h4 class="author"><em>Elliot Pickens</em></h4>
 
 </div>
 
 
-<div id="welcome-to-the-carleton-algorithmic-trading-club-homepage" class="section level3">
-<h3>Welcome to the Carleton Algorithmic Trading Club Homepage</h3>
-<div id="news" class="section level4">
-<h4><strong>News</strong></h4>
+<p>Merging projects is nearly impossible without Git so let’s get it up and running and then learn the basics.</p>
+<div id="install-git" class="section level4">
+<h4><strong>Install Git</strong></h4>
+<p><strong>OSX</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Install Homebrew if you don’t already have it by running <strong>ruby -e “$(curl -fsSL <a href="https://raw.githubusercontent.com/Homebrew/install/master/install" class="uri">https://raw.githubusercontent.com/Homebrew/install/master/install</a>)”</strong> in the terminal</p>
 <ul>
-<li>Visit us on Friday, September 14 from 5:00-7:00 PM at the Carleton College Club Fair!</li>
-<li>We’re excited to announce that we’re purchasing an <a href="https://developer.nvidia.com/embedded/buy/jetson-tx2">Nvidida Jetson</a> for the club!</li>
-<li>We now have a club GitHub <a href="https://github.com/CarletonAlgoClub">page</a></li>
+<li>Check your brew installation with <strong>brew doctor</strong></li>
+</ul></li>
+<li><p>Install git with the command <strong>brew install git</strong></p></li>
+</ol>
+<p><strong>Linux</strong></p>
+<ol style="list-style-type: decimal">
+<li>Run <strong>sudo apt-get install git</strong> in the terminal</li>
+</ol>
+<p><strong>Windows</strong></p>
+<ol style="list-style-type: decimal">
+<li>Download and install git for windows <a href="https://gitforwindows.org/">here</a></li>
+</ol>
+<p>Confirm your git installation with <strong>git –version</strong></p>
+</div>
+<div id="configure-git" class="section level4">
+<h4><strong>Configure Git</strong></h4>
+<p>Now that you’ve got git installed you need to configure it to work with your GitHub. If you don’t already have a GitHub account you can sign up for one <a href="https://github.com/join" title="Join GitHub">here</a>.</p>
+<p>Configure your username and email with the following commands.</p>
+<ul>
+<li>git config –global user.name “your_username”</li>
+<li>git config –global user.email “<a href="mailto:your_account_email@email_host.com">your_account_email@email_host.com</a>”</li>
 </ul>
 </div>
-<div id="check-out-our-recent-posts" class="section level4">
-<h4><strong>Check Out Our Recent Posts</strong></h4>
+<div id="git-basics" class="section level4">
+<h4><strong>Git Basics</strong></h4>
+<p>The first step to working with Git is to create a repository. You can create a repository on the GitHub webpage by navigating to the repository page and hitting the “New” button, or you can create a new directory and use the command <strong>git init</strong>.</p>
+<p>If someone else has already created a repository as is often the case you can “clone” the repository to your machine using the command <strong>git clone</strong> followed by the https address that is associated with a given repositroy. The https address associated with a repo can be found in the top right corner of a repository page as shown in the picture below.</p>
+<div class="figure">
+<img src="clone_repo.png" />
+
+</div>
+<p>Now that you’ve got a repository setup you can make changes to the project using the following commands.</p>
 <ul>
-<li><a href="git_basics.html">Git Basics</a></li>
-<li><a href="r_setup.html">R Setup</a></li>
-<li><a href="python_installation.html">Let’s Setup Python</a></li>
-<li><a href="content.html">Older Posts</a></li>
+<li><strong>git add</strong></li>
+<li><strong>git commit -m “your update message”</strong></li>
+<li><strong>git push</strong></li>
+<li><strong>git pull</strong></li>
 </ul>
+<p><strong>git add <your_file></strong> will add changes to a given file to a list of potential edits. <strong>git add .</strong> will add all edits to all files in the repository to the list of potential edits. <strong>git commit -m “update message”</strong> will commit those changes. <strong>git push</strong> will push your changes to the repo. <strong>git pull</strong> will pull changes others have made to the repo to your local copy of the repo. It is important to use <strong>git pull</strong> frequently to avoid merge conflicts and help resolve them when they ultimately happen.</p>
 </div>
-<div id="join-our-google-group" class="section level4">
-<h4><strong>Join Our Google Group</strong></h4>
-<p><a href="https://groups.google.com/a/carleton.edu/forum/#!forum/carletonalgoclub.group" title="Join Our Google Group">Carleton Algo Club Google Group</a></p>
-</div>
-<div id="get-in-contact" class="section level4">
-<h4><strong>Get in Contact</strong></h4>
-<p>If you have any specific questions or want to learn more about our organization please reach out! We’re always happy to talk about the club over email or in person.</p>
-<p><a href="contact.html" title="Contact Us">Contact Us</a></p>
-</div>
+<div id="merge-conflicts" class="section level4">
+<h4><strong>Merge Conflicts</strong></h4>
+<p>It’s quite likely that you’ll encounter merge conflicts while working with Git on a regular basis, and while they can be quite frustrating they are not that difficult to fix.</p>
+<ol style="list-style-type: decimal">
+<li><p>Update your repo using <strong>git pull</strong></p></li>
+<li><p>Try to merge your changes using the <strong>git merge <repo_branch_you_are working from></strong> command</p>
+<ul>
+<li>If this fails make manual changes to your files as suggested by Git (these suggestions will be visible in the documents casuing the merge conflicts)</li>
+</ul></li>
+<li><p>Use <strong>git add</strong> and then <strong>git merge</strong> to try and merge your changes</p></li>
+<li><p>If you’re still getting errors go back to step 1</p></li>
+</ol>
 </div>
 
 

@@ -1,0 +1,72 @@
+---
+title: "Git Basics"
+author: "Elliot Pickens"
+---
+
+Merging projects is nearly impossible without Git so let's get it up and running and then learn the basics. 
+
+#### __Install Git__
+
+__OSX__
+
+1. Install Homebrew if you don't already have it by running __ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"__ in the terminal
+
+    + Check your brew installation with __brew doctor__
+
+2. Install git with the command __brew install git__
+
+__Linux__
+
+1. Run __sudo apt-get install git__ in the terminal
+
+__Windows__
+
+1. Download and install git for windows [here](https://gitforwindows.org/)
+
+Confirm your git installation with __git --version__
+
+#### __Configure Git__
+
+Now that you've got git installed you need to configure it to work with your GitHub. If you don't already have a GitHub account you can sign up for one [here](https://github.com/join "Join GitHub").
+
+Configure your username and email with the following commands.
+
++ git config --global user.name "your_username"
++ git config --global user.email "your_account_email@email_host.com"
+
+#### __Git Basics__
+
+The first step to working with Git is to create a repository. You can create a repository on the GitHub webpage by navigating to the repository page and hitting the "New" button, or you can create a new directory and use the command __git init__.
+
+If someone else has already created a repository as is often the case you can "clone" the repository to your machine using the command __git clone__ followed by the https address that is associated with a given repositroy. The https address associated with a repo can be found in the top right corner of a repository page as shown in the picture below.
+
+![](clone_repo.png)
+
+Now that you've got a repository setup you can make changes to the project using the following commands.
+
++ __git add__
++ __git commit -m "your update message"__
++ __git push__
++ __git pull__
+
+__git add <your_file>__ will add changes to a given file to a list of potential edits. __git add .__ will add all edits to all files in the repository to the list of potential edits. __git commit -m "update message"__ will commit those changes. __git push__ will push your changes to the repo. __git pull__ will pull changes others have made to the repo to your local copy of the repo. It is important to use __git pull__ frequently to avoid merge conflicts and help resolve them when they ultimately happen.
+
+#### __Merge Conflicts__
+
+It's quite likely that you'll encounter merge conflicts while working with Git on a regular basis, and while they can be quite frustrating they are not that difficult to fix. 
+
+1. Update your repo using __git pull__
+
+2. Try to merge your changes using the __git merge <repo_branch_you_are working from>__ command
+
+    + If this fails make manual changes to your files as suggested by Git (these suggestions will be visible in the documents casuing the merge conflicts)
+    
+3. Use __git add__ and then __git merge__ to try and merge your changes
+
+4. If you're still getting errors go back to step 1
+
+
+
+
+
+

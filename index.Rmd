@@ -7,10 +7,13 @@ title: "Carleton Algo Club"
 
 #### __News__
 
-Visit us on Friday, September 14 from 5:00-7:00 PM at the Carleton College Club Fair!
++ Visit us on Friday, September 14 from 5:00-7:00 PM at the Carleton College Club Fair!
++ We're excited to announce that we're purchasing an [Nvidida Jetson](https://developer.nvidia.com/embedded/buy/jetson-tx2) for the club!
++ We now have a club GitHub [page](https://github.com/CarletonAlgoClub) 
 
 #### __Check Out Our Recent Posts__
 
++ [Git Basics](git_basics.html)
 + [R Setup](r_setup.html)
 + [Let's Setup Python](python_installation.html)
 + [Older Posts](content.html)
