@@ -1,0 +1,12 @@
+---
+title: "R Basics"
+author: "Elliot Pickens"
+---
+
+If you don't already have R and R Studio installed check out my installation guide here: [R Setup](r_setup.html).
+
+#### __Basic Data Structures__
+
+__Vector__
+
+A vector in R can be used to contain a series 
