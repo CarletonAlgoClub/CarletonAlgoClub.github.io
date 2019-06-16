@@ -1,9 +1,9 @@
 ---
-keywords: "data, trading, algorithm, finance, carleton, data, statistics"
 title: "Carleton Algo Club"
+keywords: data, trading, algorithm, finance, carleton, data, statistics
 ---
 
-### Welcome to the Carleton Algorithmic Trading Club Homepage
+### Welcome to the Carleton Data Science Club Homepage
 
 #### __News__
 
