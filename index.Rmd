@@ -1,5 +1,5 @@
 ---
-title: "Carleton Algo Club"
+title: "Carleton Data Science Club"
 keywords: data, trading, algorithm, finance, carleton, data, statistics
 ---
 
@@ -21,7 +21,7 @@ keywords: data, trading, algorithm, finance, carleton, data, statistics
 
 #### __Join Our Google Group__
 
-[Carleton Algo Club Google Group](https://groups.google.com/a/carleton.edu/forum/#!forum/carletonalgoclub.group "Join Our Google Group")
+[Carleton Data Science Club Google Group](https://groups.google.com/a/carleton.edu/forum/#!forum/carletonalgoclub.group "Join Our Google Group")
 
 #### __Get in Contact__
 
