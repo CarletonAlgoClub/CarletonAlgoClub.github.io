@@ -9,10 +9,9 @@
 <meta name="generator" content="pandoc" />
 
 
-<meta name="author" content="Elliot Pickens" />
 
 
-<title>Let’s Setup Python</title>
+<title>Schedule</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -70,9 +69,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -97,6 +94,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -111,7 +111,6 @@ body {
   padding-top: 50px;
   margin-top: -50px;
 }
-
 .section h2 {
   padding-top: 50px;
   margin-top: -50px;
@@ -131,6 +130,43 @@ body {
 .section h6 {
   padding-top: 50px;
   margin-top: -50px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -152,19 +188,85 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -211,77 +313,13 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Let’s Setup Python</h1>
-<h4 class="author"><em>Elliot Pickens</em></h4>
+<h1 class="title toc-ignore">Schedule</h1>
 
 </div>
 
 
-<p>During club activities we will often rely on a number of Python packages that are not included in the base installation of python. To simplify things and make sure we’re all on the same page we’re going to be using the Anaconda Python distribution.</p>
-<p>Anaconda streamlines package management through Conda, and pre-installs many of the most frequently used data science packages. I’d strongly recommend you use it to keep track of your packages, but if you want to do things the hard way you can scroll past the Anaconda installation guide to find a guide for the base installation of Python.</p>
-<div id="anaconda-installation" class="section level4">
-<h4><strong>Anaconda Installation</strong></h4>
-</div>
-<div id="osx" class="section level4">
-<h4><strong>OSX</strong></h4>
-<ol style="list-style-type: decimal">
-<li><p>Download the <a href="https://www.anaconda.com/download/#macos">Anaconda installer</a> <strong>Python 3.6 Version</strong></p></li>
-<li><p>Double click the <strong>.pkg</strong> file and begin the installation</p></li>
-<li><p>Test your installation by typing <strong>conda</strong> in the terminal</p></li>
-</ol>
-</div>
-<div id="windows" class="section level4">
-<h4><strong>Windows</strong></h4>
-<ol style="list-style-type: decimal">
-<li><p>Download the <a href="https://www.anaconda.com/download/#windows">Anaconda installer</a> <strong>Python 3.6 Version</strong></p></li>
-<li><p>Double click the <strong>.exe</strong> file and begin the installation</p></li>
-<li><p>Test your installation by typing <strong>conda</strong> in the terminal</p></li>
-</ol>
-</div>
-<div id="linux" class="section level4">
-<h4><strong>Linux</strong></h4>
-<ol style="list-style-type: decimal">
-<li><p>Download the <a href="https://www.anaconda.com/download/#linux">Anaconda installer</a> <strong>Python 3.6 Version</strong></p></li>
-<li><p>Open the terminal and navigate you the location of the Anaconda download</p></li>
-<li><p>Run <strong>bash Anaconda3-5.2.0-Linux-x86_64.sh</strong> – replace 3-5.2.0 with whichever version you’ve downloaded</p></li>
-<li><p>Follow the installation prompts</p></li>
-<li><p>Test your installation by typing <strong>conda</strong> in the terminal</p></li>
-</ol>
-<p>You can also check your Python installation by typing <strong>python –version</strong> in your terminal if you’re on osx or linux, or simply <strong>python</strong> if you’re running windows.</p>
-</div>
-<div id="basic-python-3.6-installation" class="section level4">
-<h4><strong>Basic Python 3.6 installation</strong></h4>
-<p><strong>OSX</strong> should already come with python pre-installed, but if it isn’t version 3.6 you can update it using the following commands.</p>
-<ol style="list-style-type: decimal">
-<li><p>Install Xcode</p>
-<ul>
-<li>In the terminal run <strong>xcode-select –install</strong> (this may take a while)</li>
-</ul></li>
-<li><p>Install Homebrew</p>
-<ul>
-<li>In the terminal run <strong>/usr/bin/ruby -e “$(curl -fsSL <a href="https://raw.githubusercontent.com/Homebrew/install/master/install" class="uri">https://raw.githubusercontent.com/Homebrew/install/master/install</a>)”</strong></li>
-</ul></li>
-<li><p>Check your Homebrew installation by typing <strong>brew doctor</strong></p></li>
-<li><p>Install Python 3.6</p>
-<ul>
-<li>Run <strong>brew install python3</strong> in the terminal</li>
-</ul></li>
-<li><p>Check your python installation using <strong>python3 –version</strong></p></li>
-</ol>
-<p><strong>Windows</strong></p>
-<ol style="list-style-type: decimal">
-<li><p>Download the latest Python installer <a href="https://www.python.org/downloads/windows/">here</a></p></li>
-<li><p>Run the downloaded <strong>.exe</strong> file</p></li>
-<li><p>Check your installation by running <strong>python -V</strong> in the terminal</p></li>
-</ol>
-<p><strong>Linux</strong></p>
-<ol style="list-style-type: decimal">
-<li><p>Run <strong>sudo apt update</strong> in the terminal</p></li>
-<li><p>Run <strong>sudo apt install python3.6</strong> in the terminal</p></li>
-<li><p>Check the installation by running <strong>python3.6 -V</strong></p></li>
-</ol>
-<p>Now if everything went well you should have a working version of Python 3 through either Anaconda or the base install.</p>
-</div>
+<p>Meetings take place every Saturday from 3:30-4:30 in CMC 328.</p>
+<p>Weekly meeting updates will be sent out over email throughout the term. Please join our <a href="https://groups.google.com/a/carleton.edu/forum/#!forum/carletonalgoclub.group" title="Join Our Google Group">Google Group</a> to receive these scheduling updates.</p>
 
 
 

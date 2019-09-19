@@ -9,9 +9,10 @@
 <meta name="generator" content="pandoc" />
 
 
+<meta name="author" content="Elliot Pickens" />
 
 
-<title>Contact</title>
+<title>Git Basics</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -313,23 +314,72 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Contact</h1>
+<h1 class="title toc-ignore">Git Basics</h1>
+<h4 class="author">Elliot Pickens</h4>
 
 </div>
 
 
-<p><strong>Join Our Google Group for Weekly Updates!</strong></p>
-<p><a href="https://groups.google.com/a/carleton.edu/forum/#!forum/carletonalgoclub.group" title="Join Our Google Group">Carleton Data Science Club Google Group</a></p>
-<p><strong>You can reach the current club leadership via the following emails:</strong></p>
-<p>Elliot Pickens - President</p>
+<p>Merging projects is nearly impossible without Git so let’s get it up and running and then learn the basics.</p>
+<div id="install-git" class="section level4">
+<h4><strong>Install Git</strong></h4>
+<p><strong>OSX</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Install Homebrew if you don’t already have it by running <strong>ruby -e “$(curl -fsSL <a href="https://raw.githubusercontent.com/Homebrew/install/master/install" class="uri">https://raw.githubusercontent.com/Homebrew/install/master/install</a>)”</strong> in the terminal</p>
 <ul>
-<li><a href="mailto:pickense@carleton.edu">pickense@carleton.edu</a></li>
-</ul>
-<p>Ben Kendall - Treasurer</p>
+<li>Check your brew installation with <strong>brew doctor</strong></li>
+</ul></li>
+<li><p>Install git with the command <strong>brew install git</strong></p></li>
+</ol>
+<p><strong>Linux</strong></p>
+<ol style="list-style-type: decimal">
+<li>Run <strong>sudo apt-get install git</strong> in the terminal</li>
+</ol>
+<p><strong>Windows</strong></p>
+<ol style="list-style-type: decimal">
+<li>Download and install git for windows <a href="https://gitforwindows.org/">here</a></li>
+</ol>
+<p>Confirm your git installation with <strong>git –version</strong></p>
+</div>
+<div id="configure-git" class="section level4">
+<h4><strong>Configure Git</strong></h4>
+<p>Now that you’ve got git installed you need to configure it to work with your GitHub. If you don’t already have a GitHub account you can sign up for one <a href="https://github.com/join" title="Join GitHub">here</a>.</p>
+<p>Configure your username and email with the following commands.</p>
 <ul>
-<li><a href="mailto:kendallb@carleton.edu">kendallb@carleton.edu</a></li>
+<li>git config –global user.name “your_username”</li>
+<li>git config –global user.email “<a href="mailto:your_account_email@email_host.com">your_account_email@email_host.com</a>”</li>
 </ul>
-<p>If you see any of us around campus please feel free to come up and ask any questions you have about the club.</p>
+</div>
+<div id="git-basics" class="section level4">
+<h4><strong>Git Basics</strong></h4>
+<p>The first step to working with Git is to create a repository. You can create a repository on the GitHub webpage by navigating to the repository page and hitting the “New” button, or you can create a new directory and use the command <strong>git init</strong>.</p>
+<p>If someone else has already created a repository as is often the case you can “clone” the repository to your machine using the command <strong>git clone</strong> followed by the https address that is associated with a given repositroy. The https address associated with a repo can be found in the top right corner of a repository page as shown in the picture below.</p>
+<div class="figure">
+<img src="clone_repo.png" />
+
+</div>
+<p>Now that you’ve got a repository setup you can make changes to the project using the following commands.</p>
+<ul>
+<li><strong>git add</strong></li>
+<li><strong>git commit -m “your update message”</strong></li>
+<li><strong>git push</strong></li>
+<li><strong>git pull</strong></li>
+</ul>
+<p><strong>git add <your_file></strong> will add changes to a given file to a list of potential edits. <strong>git add .</strong> will add all edits to all files in the repository to the list of potential edits. <strong>git commit -m “update message”</strong> will commit those changes. <strong>git push</strong> will push your changes to the repo. <strong>git pull</strong> will pull changes others have made to the repo to your local copy of the repo. It is important to use <strong>git pull</strong> frequently to avoid merge conflicts and help resolve them when they ultimately happen.</p>
+</div>
+<div id="merge-conflicts" class="section level4">
+<h4><strong>Merge Conflicts</strong></h4>
+<p>It’s quite likely that you’ll encounter merge conflicts while working with Git on a regular basis, and while they can be quite frustrating they are not that difficult to fix.</p>
+<ol style="list-style-type: decimal">
+<li><p>Update your repo using <strong>git pull</strong></p></li>
+<li><p>Try to merge your changes using the <strong>git merge <repo_branch_you_are working from></strong> command</p>
+<ul>
+<li>If this fails make manual changes to your files as suggested by Git (these suggestions will be visible in the documents casuing the merge conflicts)</li>
+</ul></li>
+<li><p>Use <strong>git add</strong> and then <strong>git merge</strong> to try and merge your changes</p></li>
+<li><p>If you’re still getting errors go back to step 1</p></li>
+</ol>
+</div>
 
 
 

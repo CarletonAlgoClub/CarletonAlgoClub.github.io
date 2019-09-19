@@ -9,10 +9,9 @@
 <meta name="generator" content="pandoc" />
 
 
-<meta name="author" content="Elliot Pickens" />
 
 
-<title>Git Basics</title>
+<title>Main Content</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -70,9 +69,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -97,6 +94,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -111,7 +111,6 @@ body {
   padding-top: 50px;
   margin-top: -50px;
 }
-
 .section h2 {
   padding-top: 50px;
   margin-top: -50px;
@@ -131,6 +130,43 @@ body {
 .section h6 {
   padding-top: 50px;
   margin-top: -50px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -152,19 +188,85 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -211,72 +313,16 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Git Basics</h1>
-<h4 class="author"><em>Elliot Pickens</em></h4>
+<h1 class="title toc-ignore">Main Content</h1>
 
 </div>
 
 
-<p>Merging projects is nearly impossible without Git so let’s get it up and running and then learn the basics.</p>
-<div id="install-git" class="section level4">
-<h4><strong>Install Git</strong></h4>
-<p><strong>OSX</strong></p>
-<ol style="list-style-type: decimal">
-<li><p>Install Homebrew if you don’t already have it by running <strong>ruby -e “$(curl -fsSL <a href="https://raw.githubusercontent.com/Homebrew/install/master/install" class="uri">https://raw.githubusercontent.com/Homebrew/install/master/install</a>)”</strong> in the terminal</p>
 <ul>
-<li>Check your brew installation with <strong>brew doctor</strong></li>
-</ul></li>
-<li><p>Install git with the command <strong>brew install git</strong></p></li>
-</ol>
-<p><strong>Linux</strong></p>
-<ol style="list-style-type: decimal">
-<li>Run <strong>sudo apt-get install git</strong> in the terminal</li>
-</ol>
-<p><strong>Windows</strong></p>
-<ol style="list-style-type: decimal">
-<li>Download and install git for windows <a href="https://gitforwindows.org/">here</a></li>
-</ol>
-<p>Confirm your git installation with <strong>git –version</strong></p>
-</div>
-<div id="configure-git" class="section level4">
-<h4><strong>Configure Git</strong></h4>
-<p>Now that you’ve got git installed you need to configure it to work with your GitHub. If you don’t already have a GitHub account you can sign up for one <a href="https://github.com/join" title="Join GitHub">here</a>.</p>
-<p>Configure your username and email with the following commands.</p>
-<ul>
-<li>git config –global user.name “your_username”</li>
-<li>git config –global user.email “<a href="mailto:your_account_email@email_host.com">your_account_email@email_host.com</a>”</li>
+<li><a href="python_installation.html">Let’s Setup Python</a></li>
+<li><a href="r_setup.html">R Setup</a></li>
+<li><a href="git_basics.html">Git Basics</a></li>
 </ul>
-</div>
-<div id="git-basics" class="section level4">
-<h4><strong>Git Basics</strong></h4>
-<p>The first step to working with Git is to create a repository. You can create a repository on the GitHub webpage by navigating to the repository page and hitting the “New” button, or you can create a new directory and use the command <strong>git init</strong>.</p>
-<p>If someone else has already created a repository as is often the case you can “clone” the repository to your machine using the command <strong>git clone</strong> followed by the https address that is associated with a given repositroy. The https address associated with a repo can be found in the top right corner of a repository page as shown in the picture below.</p>
-<div class="figure">
-<img src="clone_repo.png" />
-
-</div>
-<p>Now that you’ve got a repository setup you can make changes to the project using the following commands.</p>
-<ul>
-<li><strong>git add</strong></li>
-<li><strong>git commit -m “your update message”</strong></li>
-<li><strong>git push</strong></li>
-<li><strong>git pull</strong></li>
-</ul>
-<p><strong>git add <your_file></strong> will add changes to a given file to a list of potential edits. <strong>git add .</strong> will add all edits to all files in the repository to the list of potential edits. <strong>git commit -m “update message”</strong> will commit those changes. <strong>git push</strong> will push your changes to the repo. <strong>git pull</strong> will pull changes others have made to the repo to your local copy of the repo. It is important to use <strong>git pull</strong> frequently to avoid merge conflicts and help resolve them when they ultimately happen.</p>
-</div>
-<div id="merge-conflicts" class="section level4">
-<h4><strong>Merge Conflicts</strong></h4>
-<p>It’s quite likely that you’ll encounter merge conflicts while working with Git on a regular basis, and while they can be quite frustrating they are not that difficult to fix.</p>
-<ol style="list-style-type: decimal">
-<li><p>Update your repo using <strong>git pull</strong></p></li>
-<li><p>Try to merge your changes using the <strong>git merge <repo_branch_you_are working from></strong> command</p>
-<ul>
-<li>If this fails make manual changes to your files as suggested by Git (these suggestions will be visible in the documents casuing the merge conflicts)</li>
-</ul></li>
-<li><p>Use <strong>git add</strong> and then <strong>git merge</strong> to try and merge your changes</p></li>
-<li><p>If you’re still getting errors go back to step 1</p></li>
-</ol>
-</div>
 
 
 
