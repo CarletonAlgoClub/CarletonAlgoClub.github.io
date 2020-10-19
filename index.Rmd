@@ -7,8 +7,9 @@ keywords: data, trading, algorithm, finance, carleton, data, statistics
 
 #### __News__
 
-+ Visit us on Friday, September 20th from 5:00-7:00 PM at the Carleton College Club Fair!
-+ We're back for winter term! Stop by our first club meeting of the term this Saturday (Sept. 21) in CMC 328 at 3:30
++ 2020 might be a wierd year, but the club will keep going! Stay posted and contact club leadership if you're interested in updates!
++ ~~Visit us on Friday, September 20th from 5:00-7:00 PM at the Carleton College Club Fair!~~
++ ~~We're back for fall term! Stop by our first club meeting of the term this Saturday (Sept. 21) in CMC 328 at 3:30~~
 + ~~We're back for winter term! Stop by our first club meeting of the term this Saturday (Jan, 12) in the CMC at 4:00~~
 + We're excited to announce that we now have an [Nvidida Jetson](https://developer.nvidia.com/embedded/buy/jetson-tx2) for the club!
 + ~~Visit us on Friday, September 14 from 5:00-7:00 PM at the Carleton College Club Fair!~~
